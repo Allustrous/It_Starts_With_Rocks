@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
+    public GameObject Pause;
     public GameObject Stamina1;
     public GameObject Stamina2;
     public GameObject Stamina3;
@@ -13,6 +14,7 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject Stamina7;
     public GameObject Stamina8;
     public GameObject Stamina9;
+
     public float speed = 7f;
     float jumpHeight = 800;
     Rigidbody rb;
@@ -45,6 +47,11 @@ public class PlayerBehavior : MonoBehaviour
         
 
         transform.Translate(motion12Vector *speed *Time.deltaTime);
+
+        if (Input.GetKeyDown("escape"))
+        {
+            Pause.SetActive(true);
+        }
         
         if (Input.GetKeyUp("s"))
         {
