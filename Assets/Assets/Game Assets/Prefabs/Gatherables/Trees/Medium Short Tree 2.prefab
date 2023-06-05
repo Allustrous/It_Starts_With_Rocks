@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4673042521606136378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Medium Short Tree 2
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +43,10 @@ PrefabInstance:
     - target: {fileID: 3918305947827125001, guid: 0afe32ca1ada2bb46922fcabd4ff41bd, type: 3}
       propertyPath: m_Name
       value: Stump 2 Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918305947827125001, guid: 0afe32ca1ada2bb46922fcabd4ff41bd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4407703329652171187, guid: 0afe32ca1ada2bb46922fcabd4ff41bd, type: 3}
       propertyPath: m_RootOrder
@@ -87,6 +91,10 @@ PrefabInstance:
     - target: {fileID: 4407703329652171187, guid: 0afe32ca1ada2bb46922fcabd4ff41bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471123266203173840, guid: 0afe32ca1ada2bb46922fcabd4ff41bd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0afe32ca1ada2bb46922fcabd4ff41bd, type: 3}
@@ -162,6 +170,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Small Leafed Log Bottom
       objectReference: {fileID: 0}
+    - target: {fileID: 1148195729474516628, guid: 7205180519bf0a649bb57c24b138ef1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242429608185663053, guid: 7205180519bf0a649bb57c24b138ef1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7205180519bf0a649bb57c24b138ef1f, type: 3}
 --- !u!4 &7358666262894124198 stripped
@@ -176,6 +192,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4673042521606136378}
     m_Modifications:
+    - target: {fileID: 3067950187393573004, guid: faa2b89dfc571724098d29954286a9d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6063431756834534327, guid: faa2b89dfc571724098d29954286a9d2, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.25
@@ -187,6 +207,10 @@ PrefabInstance:
     - target: {fileID: 6277533617049344085, guid: faa2b89dfc571724098d29954286a9d2, type: 3}
       propertyPath: m_Name
       value: Basic Small Leafed Log Top
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277533617049344085, guid: faa2b89dfc571724098d29954286a9d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6653390308589224687, guid: faa2b89dfc571724098d29954286a9d2, type: 3}
       propertyPath: m_RootOrder

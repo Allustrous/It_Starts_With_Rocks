@@ -4,48 +4,111 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
-
-    
-    public float speed = 4f;
+    public GameObject Stamina1;
+    public GameObject Stamina2;
+    public GameObject Stamina3;
+    public GameObject Stamina4;
+    public GameObject Stamina5;
+    public GameObject Stamina6;
+    public GameObject Stamina7;
+    public GameObject Stamina8;
+    public GameObject Stamina9;
+    public float speed = 7f;
     float jumpHeight = 800;
     Rigidbody rb;
     public GameObject Player;
+    public GameObject Rock;
+    public GameObject Fiber;
+    public GameObject Wood;
+    public float stamina = 9f;
 
     // Update is called once per frame
 
     void Start () {
         StartCoroutine(Controls());
+        StartCoroutine(Stamina());
         rb = GetComponent<Rigidbody>();
 
     }
 
     void Update()
     {
-        //Up/down arrow keys
+        
         float vertical =Input.GetAxis("Vertical");
        
 
-        //left/right keys
+        
         float horizontal =Input.GetAxis("Horizontal");
 
-        //Gruping everything in one vector
+        
         Vector3 motion12Vector = new Vector3(0, 0, vertical);
         
 
         transform.Translate(motion12Vector *speed *Time.deltaTime);
         
-        if (Input.GetKey("w"))
+        if (Input.GetKeyUp("s"))
         {
             speed = 7f;
         }
 
-        if (Input.GetKey("s"))
+        if (Input.GetKeyDown("s"))
         {
             speed = 4f;
         }
 
-        
+        if (stamina == 8)
+        {
+            Stamina9.SetActive(false);
+            Stamina8.SetActive(true);
+        }
+        else if(stamina == 7)
+        {
+            Stamina8.SetActive(false);
+            Stamina7.SetActive(true);
+        }
+        else if(stamina == 6)
+        {
+            Stamina7.SetActive(false);
+            Stamina6.SetActive(true);
+        }
+        else if(stamina == 5)
+        {
+            Stamina6.SetActive(false);
+            Stamina5.SetActive(true);
+        }
+        else if(stamina == 4)
+        {
+            Stamina5.SetActive(false);
+            Stamina4.SetActive(true);
+        }
+        else if(stamina == 3)
+        {
+            Stamina4.SetActive(false);
+            Stamina3.SetActive(true);
+        }
+        else if(stamina == 2)
+        {
+            Stamina3.SetActive(false);
+            Stamina2.SetActive(true);
+        }
+        else if(stamina == 1)
+        {
+            Stamina2.SetActive(false);
+            Stamina1.SetActive(true);
+        }
+        else if(stamina == 0)
+        {
+            Stamina1.SetActive(false);
+        }
+        else if(stamina == 9)
+        {
+            Stamina9.SetActive(true);
+        }
     }
+
+
+
+        
 
     IEnumerator Controls()
     {
@@ -55,29 +118,91 @@ public class PlayerBehavior : MonoBehaviour
                 {
                     Player.transform.eulerAngles = new Vector3 (Player.transform.eulerAngles.x, Player.transform.eulerAngles.y + 5, Player.transform.eulerAngles.z);
                     
-                    Debug.Log ("Turning Right");
+                    
                     yield return new WaitForSeconds(0.01f);
                 }
                 else if (Input.GetKey("a"))
                 {
                     Player.transform.eulerAngles = new Vector3 (Player.transform.eulerAngles.x, Player.transform.eulerAngles.y - 5, Player.transform.eulerAngles.z);
                     
-                    Debug.Log ("Turning Left");
+                    
                     yield return new WaitForSeconds(0.01f);
                 }
                 else
                 {
-                    Debug.Log ("Not Turning");
+                    
                     yield return new WaitForSeconds(0.001f);
                 }
 
+
                 if (Input.GetKeyDown("space"))
-                    {
-                        rb.AddForce(Vector3.up * jumpHeight);
-                        
-                        Debug.Log ("Jump");
-                        yield return new WaitForSeconds(1f);
-                    }
+                {
+                    rb.AddForce(Vector3.up * jumpHeight);
+
+                    yield return new WaitForSeconds(1f);
+                }
         }
     }
+
+    IEnumerator Stamina()
+    {
+                while(true)
+                {
+                    if (stamina > 1)
+                    {
+                        if (Input.GetKeyDown("left shift"))
+                        {
+                            speed = 10f;
+                            StopCoroutine("Recover");
+                            StartCoroutine("Dash");
+                            yield return new WaitForSeconds(0.001f);
+                        }
+                        if (Input.GetKeyUp("left shift"))
+                        {
+                            speed = 7f;
+                            StopCoroutine("Dash");
+                            StartCoroutine("Recover");
+                            yield return new WaitForSeconds(0.001f);
+                        }
+                    }
+                    else
+                    {
+                        speed = 7f;
+                        StopCoroutine("Dash");
+                        StartCoroutine("Recover");
+                        yield return new WaitForSeconds(0.001f);
+                    }
+                    yield return null;
+                }
+    }
+
+
+    IEnumerator Dash()
+    {
+        while(true) 
+        {
+            stamina--;
+            Debug.Log(stamina);
+            yield return new WaitForSeconds(3f);
+        }
+    }
+    
+    IEnumerator Recover()
+    {
+        while(true) 
+        {
+            if (stamina < 9)
+            {
+                stamina++;
+                Debug.Log(stamina);
+                yield return new WaitForSeconds(2f);
+            }
+            else if (stamina == 9)
+            {
+                StopCoroutine("Recover");
+            }
+            yield return null;
+        }
+    }
+
 }
