@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6683353568017400413}
-  - component: {fileID: 6683353568017400412}
   - component: {fileID: 6683353568017400410}
   m_Layer: 6
   m_Name: Rocks
-  m_TagString: Stone
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,20 +32,6 @@ Transform:
   m_Father: {fileID: 6683353568393728052}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &6683353568017400412
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7216163415532195135, guid: a53e248eaa5586148a3b2b8908ecff93, type: 3}
-  m_PrefabInstance: {fileID: 1325283085165445177}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6683353568017400409}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: dfbbfe748d8d7604782b8454e6196934, type: 3}
 --- !u!54 &6683353568017400410
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,8 +93,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.1705518
-  m_Center: {x: 8.25271, y: -7.203542, z: 4.384598}
+  m_Radius: 2.9656835
+  m_Center: {x: 8.25271, y: -7.670548, z: 4.384598}
 --- !u!114 &6683353568393728050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks
       objectReference: {fileID: 0}
+    - target: {fileID: 3301044519808778080, guid: a53e248eaa5586148a3b2b8908ecff93, type: 3}
+      propertyPath: m_TagString
+      value: Asset
+      objectReference: {fileID: 0}
     - target: {fileID: 5057212481014162362, guid: a53e248eaa5586148a3b2b8908ecff93, type: 3}
       propertyPath: resourcecounter
       value: 
@@ -291,4 +280,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5057212481014162362, guid: a53e248eaa5586148a3b2b8908ecff93, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a53e248eaa5586148a3b2b8908ecff93, type: 3}

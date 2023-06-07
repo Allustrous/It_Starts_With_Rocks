@@ -126,8 +126,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4862428
-  m_Center: {x: 19.077011, y: -7.795467, z: 3.5770645}
+  m_Radius: 2.3238792
+  m_Center: {x: 19.077011, y: -8.566153, z: 3.5770645}
 --- !u!114 &8200795583060346209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,11 +168,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8200795583142931247}
-  - component: {fileID: 8200795583142931232}
   - component: {fileID: 8200795583142931234}
   m_Layer: 6
   m_Name: Rocks2
-  m_TagString: Stone
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,20 +191,6 @@ Transform:
   m_Father: {fileID: 8200795583060346223}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &8200795583142931232
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 9011956455466954841, guid: db08bd090571fb94fb2b73054e9c1dde, type: 3}
-  m_PrefabInstance: {fileID: 1695446185091642233}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8200795583142931235}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: f962b51351f8f9e4ab3ea2a064862ba5, type: 3}
 --- !u!54 &8200795583142931234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -236,6 +221,10 @@ PrefabInstance:
     - target: {fileID: 6840096453554152007, guid: db08bd090571fb94fb2b73054e9c1dde, type: 3}
       propertyPath: m_Name
       value: Rocks2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840096453554152007, guid: db08bd090571fb94fb2b73054e9c1dde, type: 3}
+      propertyPath: m_TagString
+      value: Asset
       objectReference: {fileID: 0}
     - target: {fileID: 6911478154309535341, guid: db08bd090571fb94fb2b73054e9c1dde, type: 3}
       propertyPath: m_RootOrder
@@ -283,4 +272,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1189521423366563453, guid: db08bd090571fb94fb2b73054e9c1dde, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: db08bd090571fb94fb2b73054e9c1dde, type: 3}

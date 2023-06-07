@@ -20,10 +20,9 @@ public class StoneGather : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 gatheringCounter++;
-                Debug.Log("StoneAxed");
+                
             }
         }
-        
     }
 
     void Start()
@@ -37,16 +36,16 @@ public class StoneGather : MonoBehaviour
         if(respawn == 1)
             {
                 StartCoroutine("Spawner");
-                Debug.Log("Respawning");
+                
             }
         else if (respawn < 1)
             {
-                Debug.Log("Spawned");
+                
                 StopCoroutine("Spawned");
             }
         if (gatheringCounter == 5)
             {
-                Debug.Log("Gathered");
+                
                 StartCoroutine("Resourcer");
             }
         else if (gatheringCounter == 0)
@@ -59,7 +58,7 @@ public class StoneGather : MonoBehaviour
     IEnumerator Spawner ()
     {
         yield return new WaitForSeconds(5);
-        Debug.Log("Spawned");
+        
         Part1.SetActive(true);
         respawn = 0;
         respawned = 0;
@@ -67,7 +66,7 @@ public class StoneGather : MonoBehaviour
     }
     IEnumerator Resourcer ()
     {
-        Debug.Log("Stone Packed");
+        
         Part1.SetActive(false);
         resourcecounter.gatheredStone += 5;
         respawn = 1;
@@ -75,5 +74,7 @@ public class StoneGather : MonoBehaviour
         gatheringCounter = 0;
         yield return null;
     }
+
+
 
 }

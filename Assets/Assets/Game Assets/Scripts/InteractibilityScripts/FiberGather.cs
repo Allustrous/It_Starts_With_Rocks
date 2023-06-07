@@ -20,10 +20,9 @@ public class FiberGather : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 gatheringCounter++;
-                Debug.Log("FiberAxed");
+                
             }
         }
-        
     }
 
     void Start()
@@ -37,16 +36,14 @@ public class FiberGather : MonoBehaviour
         if(respawn == 1)
             {
                 StartCoroutine("Spawner");
-                Debug.Log("Respawning");
+                
             }
         else if (respawn < 1)
             {
-                Debug.Log("Spawned");
                 StopCoroutine("Spawned");
             }
         if (gatheringCounter == 5)
             {
-                Debug.Log("Gathered");
                 StartCoroutine("Resourcer");
             }
         else if (gatheringCounter == 0)
@@ -59,7 +56,6 @@ public class FiberGather : MonoBehaviour
     IEnumerator Spawner ()
     {
         yield return new WaitForSeconds(5);
-        Debug.Log("Spawned");
         Part1.SetActive(true);
         respawn = 0;
         respawned = 0;
@@ -67,7 +63,6 @@ public class FiberGather : MonoBehaviour
     }
     IEnumerator Resourcer ()
     {
-        Debug.Log("Fiber Packed");
         Part1.SetActive(false);
         resourcecounter.gatheredFiber += 5;
         respawn = 1;

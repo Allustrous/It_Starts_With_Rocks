@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4367734904329737895}
-  - component: {fileID: 4367734904329737897}
   - component: {fileID: 4367734904329737896}
   m_Layer: 6
   m_Name: Tall Grass
-  m_TagString: Fiber
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,20 +32,6 @@ Transform:
   m_Father: {fileID: 4367734904490549329}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &4367734904329737897
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3508941813613076286, guid: abc33e6249f2eea4eb0146f3c540cda6, type: 3}
-  m_PrefabInstance: {fileID: 4367734904329737893}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4367734904329737894}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 6c7843de1dd1a264ea76d3cd5041317a, type: 3}
 --- !u!54 &4367734904329737896
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -277,6 +262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tall Grass
       objectReference: {fileID: 0}
+    - target: {fileID: 4355871636051887533, guid: abc33e6249f2eea4eb0146f3c540cda6, type: 3}
+      propertyPath: m_TagString
+      value: Asset
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4213487556982130475, guid: abc33e6249f2eea4eb0146f3c540cda6, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: abc33e6249f2eea4eb0146f3c540cda6, type: 3}

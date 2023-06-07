@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6646715573008663331}
   m_Layer: 6
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 1717808567037876824}
   m_Layer: 6
   m_Name: Medium Short Tree 2
-  m_TagString: Wood
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 5781510588907403264}
   m_Layer: 6
   m_Name: Basic Small Leafed Log Top
-  m_TagString: Treetop
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 1086269216950252278}
   m_Layer: 6
   m_Name: Basic Small Leafed Log Bottom
-  m_TagString: Treetop
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,8 +294,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8653929427955909471}
-  - component: {fileID: 8675324004989979897}
   - component: {fileID: 5802392224802389823}
+  - component: {fileID: 8258147261892186921}
   m_Layer: 6
   m_Name: Stump 2 Medium
   m_TagString: Untagged
@@ -318,20 +318,6 @@ Transform:
   m_Father: {fileID: 1717808567037876824}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &8675324004989979897
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5802392224802389822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 9ca0bef50e47fb04e941cd69ef0b00cd, type: 3}
 --- !u!114 &5802392224802389823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +335,19 @@ MonoBehaviour:
   Part2: {fileID: 5802392224802389816}
   Part3: {fileID: 0}
   gatheringCounter: 0
+--- !u!135 &8258147261892186921
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5802392224802389822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.9055538
+  m_Center: {x: 0, y: 7.683878, z: 1.0861416}
 --- !u!1 &7946083856080487770
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7117327882518888817}
   m_Layer: 6
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4723719171664542459}
   m_Layer: 6
   m_Name: Basic Small Leafed Log Tall
-  m_TagString: Treetop
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 6872610811156614540}
   m_Layer: 6
   m_Name: Basic Small Leafed Log Bottom
-  m_TagString: Treetop
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 8265631652324971193}
   m_Layer: 6
   m_Name: Basic Small Leafed Log Top
-  m_TagString: Treetop
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,8 +225,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2379182252044929197}
-  - component: {fileID: 6581136636998079514}
   - component: {fileID: 970510419586132407}
+  - component: {fileID: 4528198705088899059}
   m_Layer: 6
   m_Name: Stump 1 Medium
   m_TagString: Untagged
@@ -249,20 +249,6 @@ Transform:
   m_Father: {fileID: 709854447855071757}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &6581136636998079514
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970510419586132406}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4ce78dd0c47cfa64ba2768d779f62715, type: 3}
 --- !u!114 &970510419586132407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +266,19 @@ MonoBehaviour:
   Part2: {fileID: 970510419586132404}
   Part3: {fileID: 970510419586132403}
   gatheringCounter: 0
+--- !u!135 &4528198705088899059
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970510419586132406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5641499
+  m_Center: {x: 0, y: 7.0466347, z: 1.208107}
 --- !u!1 &1632900543822365918
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +290,7 @@ GameObject:
   - component: {fileID: 709854447855071757}
   m_Layer: 6
   m_Name: Medium Tall Tree
-  m_TagString: Wood
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +407,7 @@ GameObject:
   - component: {fileID: 5294316002071489469}
   m_Layer: 6
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,7 +488,7 @@ GameObject:
   - component: {fileID: 5939726375382348052}
   m_Layer: 6
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

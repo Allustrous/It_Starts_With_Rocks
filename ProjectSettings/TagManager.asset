@@ -10,6 +10,8 @@ TagManager:
   - Fiber
   - Event
   - Treetop
+  - Asset
+  - Camera
   layers:
   - Default
   - TransparentFX

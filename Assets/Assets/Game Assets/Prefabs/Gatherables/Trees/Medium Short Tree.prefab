@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3126774491828088510}
   m_Layer: 6
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 3228355244831233561}
   m_Layer: 6
   m_Name: Basic Small Leafed Log Top
-  m_TagString: Treetop
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 3681797417549817068}
   m_Layer: 6
   m_Name: Basic Small Leafed Log Bottom
-  m_TagString: Treetop
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,8 +261,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4578317941835540069}
-  - component: {fileID: 6268463203939449746}
   - component: {fileID: 7610170979846378584}
+  - component: {fileID: 3837956406422057065}
   m_Layer: 6
   m_Name: Stump 1 Medium
   m_TagString: Untagged
@@ -285,20 +285,6 @@ Transform:
   m_Father: {fileID: 4218323999968764700}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &6268463203939449746
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7610170979846378567}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4ce78dd0c47cfa64ba2768d779f62715, type: 3}
 --- !u!114 &7610170979846378584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +302,19 @@ MonoBehaviour:
   Part2: {fileID: 7610170979846378565}
   Part3: {fileID: 0}
   gatheringCounter: 0
+--- !u!135 &3837956406422057065
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610170979846378567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5790777
+  m_Center: {x: 0, y: 6.985344, z: 1.208107}
 --- !u!1 &8046725885694883009
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +326,7 @@ GameObject:
   - component: {fileID: 4218323999968764700}
   m_Layer: 6
   m_Name: Medium Short Tree
-  m_TagString: Wood
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,7 +361,7 @@ GameObject:
   - component: {fileID: 643193386112919107}
   m_Layer: 6
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Asset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

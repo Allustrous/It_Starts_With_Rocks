@@ -189,7 +189,7 @@ public class PlayerBehavior : MonoBehaviour
         while(true) 
         {
             stamina--;
-            Debug.Log(stamina);
+            
             yield return new WaitForSeconds(3f);
         }
     }
@@ -201,7 +201,7 @@ public class PlayerBehavior : MonoBehaviour
             if (stamina < 9)
             {
                 stamina++;
-                Debug.Log(stamina);
+                
                 yield return new WaitForSeconds(2f);
             }
             else if (stamina == 9)

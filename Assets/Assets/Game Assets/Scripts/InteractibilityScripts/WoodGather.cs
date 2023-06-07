@@ -9,11 +9,9 @@ public class WoodGather : MonoBehaviour
     public GameObject Part2;
     public GameObject Part3;
     public float gatheringCounter = 0;
-    float respawn = 0;
     float respawned = 0;
 
 
-    // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
         if (respawned == 0)
@@ -21,10 +19,37 @@ public class WoodGather : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 gatheringCounter++;
-                Debug.Log("WoodAxed");
             }
         }
+
+        if (collision.gameObject.tag == "Camera")
+        {
+            Part1.SetActive(false);
+            Part2.SetActive(false);
+            Part3.SetActive(false);
+        }
+
+        if (gatheringCounter == 5)
+            {
+                StartCoroutine("Resourcer");
+                StartCoroutine("Spawner");
+                respawned = 1;
+            }
+        else if (gatheringCounter == 0)
+            {
+                respawned = 0;
+            }
         
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Camera")
+        {
+            Part1.SetActive(true);
+            Part2.SetActive(true);
+            Part3.SetActive(true);
+        }
     }
 
     void Start()
@@ -34,51 +59,28 @@ public class WoodGather : MonoBehaviour
 
     void Update()
     {
-
-        if(respawn == 1)
-            {
-                StartCoroutine("Spawner");
-                Debug.Log("Respawning");
-            }
-        else if (respawn < 1)
-            {
-                Debug.Log("Spawned");
-                StopCoroutine("Spawned");
-            }
-        if (gatheringCounter == 5)
-            {
-                Debug.Log("Gathered");
-                StartCoroutine("Resourcer");
-            }
-        else if (gatheringCounter == 0)
-        {
-            StopCoroutine("Resourcer");
-        }
-
     }
 
     IEnumerator Spawner ()
     {
         yield return new WaitForSeconds(5);
-        Debug.Log("Spawned");
+        gatheringCounter = 0;
         Part1.SetActive(true);
         Part2.SetActive(true);
         Part3.SetActive(true);
-        respawn = 0;
-        respawned = 0;
-        yield return null;
+        StopCoroutine("Spawner");
+        
     }
     IEnumerator Resourcer ()
     {
-        Debug.Log("Wood Packed");
+        resourcecounter.gatheredWood += 5;
         Part1.SetActive(false);
         Part2.SetActive(false);
         Part3.SetActive(false);
-        resourcecounter.gatheredWood += 5;
-        respawn = 1;
-        respawned = 1;
-        gatheringCounter = 0;
-        yield return null;
+        StopCoroutine("Resourcer");
+        yield return new WaitForSeconds(1);
     }
+
+
 
 }
