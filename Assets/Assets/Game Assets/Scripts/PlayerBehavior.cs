@@ -16,7 +16,7 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject Stamina9;
 
     public float speed = 7f;
-    float jumpHeight = 800;
+    float jumpHeight = 900;
     Rigidbody rb;
     public GameObject Player;
     public GameObject Rock;

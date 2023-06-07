@@ -9,6 +9,7 @@ TagManager:
   - Stone
   - Fiber
   - Event
+  - Treetop
   layers:
   - Default
   - TransparentFX

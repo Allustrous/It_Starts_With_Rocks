@@ -6,19 +6,24 @@ using TMPro;
 public class StoneGather : MonoBehaviour
 {
     public ResourceCounter resourcecounter;
+    public GameObject Part1;
     public float gatheringCounter = 0;
-    public float TimeLeft = 5;
-    public float TimerOn = 0;
+    float respawn = 0;
+    float respawned = 0;
 
 
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (respawned == 0)
         {
-            gatheringCounter++;
-            Debug.Log("StonePicked");
+            if (collision.gameObject.tag == "Player")
+            {
+                gatheringCounter++;
+                Debug.Log("StoneAxed");
+            }
         }
+        
     }
 
     void Start()
@@ -28,37 +33,47 @@ public class StoneGather : MonoBehaviour
 
     void Update()
     {
-        if(TimerOn == 1)
-        {
-            Debug.Log(TimeLeft);
-            if(TimeLeft > 0)
+
+        if(respawn == 1)
             {
-                TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
-                Debug.Log(TimeLeft);
+                StartCoroutine("Spawner");
+                Debug.Log("Respawning");
             }
-            else{
-                Debug.Log(TimeLeft);
-                TimeLeft = 0;
-                TimerOn--;
-                gameObject.SetActive(true);
+        else if (respawn < 1)
+            {
+                Debug.Log("Spawned");
+                StopCoroutine("Spawned");
             }
-        }
         if (gatheringCounter == 5)
-                {
-                    Debug.Log("StoneGathered");
-                    gameObject.SetActive(false);
-                    TimerOn += 1;
-                    resourcecounter.gatheredStone += 5;
-                }
+            {
+                Debug.Log("Gathered");
+                StartCoroutine("Resourcer");
+            }
+        else if (gatheringCounter == 0)
+        {
+            StopCoroutine("Resourcer");
+        }
+
     }
 
-    void updateTimer(float currentTime)
+    IEnumerator Spawner ()
     {
-        currentTime += 1;
-        float minutes = Mathf.FloorToInt(currentTime / 60);
-        float seconds = Mathf.FloorToInt(currentTime % 60);
+        yield return new WaitForSeconds(5);
+        Debug.Log("Spawned");
+        Part1.SetActive(true);
+        respawn = 0;
+        respawned = 0;
+        yield return null;
     }
-
+    IEnumerator Resourcer ()
+    {
+        Debug.Log("Stone Packed");
+        Part1.SetActive(false);
+        resourcecounter.gatheredStone += 5;
+        respawn = 1;
+        respawned = 1;
+        gatheringCounter = 0;
+        yield return null;
+    }
 
 }
