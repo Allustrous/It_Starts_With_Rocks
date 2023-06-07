@@ -159,7 +159,7 @@ public class PlayerBehavior : MonoBehaviour
                     {
                         if (Input.GetKeyDown("left shift"))
                         {
-                            speed = 14f;
+                            speed = 18f;
                             StopCoroutine("Recover");
                             StartCoroutine("Dash");
                             yield return new WaitForSeconds(0.001f);
