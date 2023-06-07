@@ -20,6 +20,20 @@ public class WoodGather : MonoBehaviour
             {
                 gatheringCounter++;
             }
+            if (gatheringCounter == 5)
+            {
+                StartCoroutine("Resourcer");
+                StartCoroutine("Spawner");
+                StartCoroutine("CodingSucks");
+                respawned = 1;
+            }
+            else if (gatheringCounter == 0)
+            {
+                respawned = 0;
+                StopCoroutine("Spawner");
+                StopCoroutine("Resourcer");
+                StopCoroutine("CodingSucks");
+            }
         }
 
         if (collision.gameObject.tag == "Camera")
@@ -28,18 +42,6 @@ public class WoodGather : MonoBehaviour
             Part2.SetActive(false);
             Part3.SetActive(false);
         }
-
-        if (gatheringCounter == 5)
-            {
-                StartCoroutine("Resourcer");
-                StartCoroutine("Spawner");
-                respawned = 1;
-            }
-        else if (gatheringCounter == 0)
-            {
-                respawned = 0;
-            }
-        
     }
 
     private void OnCollisionExit(Collision other)
@@ -59,16 +61,22 @@ public class WoodGather : MonoBehaviour
 
     void Update()
     {
+        if (gatheringCounter == 0)
+            {
+                respawned = 0;
+                StopCoroutine("Spawner");
+                StopCoroutine("Resourcer");
+                StopCoroutine("CodingSucks");
+            }
     }
 
     IEnumerator Spawner ()
     {
         yield return new WaitForSeconds(5);
-        gatheringCounter = 0;
         Part1.SetActive(true);
         Part2.SetActive(true);
         Part3.SetActive(true);
-        StopCoroutine("Spawner");
+        
         
     }
     IEnumerator Resourcer ()
@@ -77,9 +85,15 @@ public class WoodGather : MonoBehaviour
         Part1.SetActive(false);
         Part2.SetActive(false);
         Part3.SetActive(false);
-        StopCoroutine("Resourcer");
+        
         yield return new WaitForSeconds(1);
     }
+
+     IEnumerator CodingSucks ()
+     {
+        yield return new WaitForSeconds(5);
+        gatheringCounter = 0;
+     }
 
 
 

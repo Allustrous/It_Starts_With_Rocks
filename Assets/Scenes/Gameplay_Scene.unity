@@ -3187,6 +3187,10 @@ GameObject:
   - component: {fileID: 192783812}
   - component: {fileID: 192783811}
   - component: {fileID: 192783810}
+  - component: {fileID: 192783817}
+  - component: {fileID: 192783816}
+  - component: {fileID: 192783815}
+  - component: {fileID: 192783814}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Camera
@@ -3201,13 +3205,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192783808}
-  m_LocalRotation: {x: -0.44032347, y: -0, z: -0, w: 0.8978392}
+  m_LocalRotation: {x: 0.42261845, y: -0, z: -0, w: -0.9063077}
   m_LocalPosition: {x: 0, y: -20.583265, z: -1.8626823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 710355763}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -52.249, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 310, y: 0, z: 0}
 --- !u!54 &192783810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3235,8 +3239,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 63.17533, y: 45.75395, z: 53.973602}
-  m_Center: {x: -0.6274605, y: -12.190401, z: 20.883678}
+  m_Size: {x: 52.70594, y: 45.75395, z: 53.973602}
+  m_Center: {x: -5.862156, y: -12.190401, z: 20.883678}
 --- !u!23 &192783812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3286,6 +3290,58 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192783808}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &192783814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192783808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2723.3762, y: 239.12247, z: 2156.9397}
+  m_Center: {x: -55.960815, y: -84.67301, z: 1342.5177}
+--- !u!65 &192783815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192783808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2695.602, y: 239.12212, z: 1941.9172}
+  m_Center: {x: -48.124573, y: -84.67303, z: -976.2925}
+--- !u!65 &192783816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192783808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1155.8011, y: 239.11935, z: 4368.227}
+  m_Center: {x: 717.6788, y: -84.67439, z: 236.86986}
+--- !u!65 &192783817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192783808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1303.9242, y: 239.1211, z: 4356.969}
+  m_Center: {x: -744.83295, y: -84.67352, z: 242.50194}
 --- !u!1001 &195439094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8641,7 +8697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -63.99945, y: -216.99994}
+  m_AnchoredPosition: {x: -63.99951, y: -216.99994}
   m_SizeDelta: {x: -1300, y: -1016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526757637
@@ -14157,7 +14213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -40.99994, y: -475.0003}
+  m_AnchoredPosition: {x: -41, y: -475.00024}
   m_SizeDelta: {x: -1840, y: -1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825806758
@@ -17562,7 +17618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.99994, y: -381.99994}
+  m_AnchoredPosition: {x: -54, y: -381.99994}
   m_SizeDelta: {x: -1070, y: -1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976984289
