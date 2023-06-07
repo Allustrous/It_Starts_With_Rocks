@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2486920046511151146}
-  - component: {fileID: 3040970450447501481}
+  - component: {fileID: 7586146849831280392}
   m_Layer: 0
   m_Name: Full Mud
   m_TagString: Untagged
@@ -32,8 +32,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &3040970450447501481
-MeshCollider:
+--- !u!65 &7586146849831280392
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -42,10 +42,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 2a59d58a65b470e438007e81f9aeff07, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.0170174, y: 3.0075731, z: 3.0064087}
+  m_Center: {x: -0.0028018951, y: 2.0028687, z: 0.0011138916}
 --- !u!1 &6072343063501175369
 GameObject:
   m_ObjectHideFlags: 0

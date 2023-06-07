@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9192080551400295980}
-  - component: {fileID: 5910009450241280900}
+  - component: {fileID: 7692758307472599263}
   m_Layer: 0
   m_Name: Full Grass
   m_TagString: Untagged
@@ -113,8 +113,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &5910009450241280900
-MeshCollider:
+--- !u!65 &7692758307472599263
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -123,7 +123,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: ce20f5fc084c38d4b868ddb10e21dc83, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.0170174, y: 3.0075731, z: 3.0064087}
+  m_Center: {x: -0.0028018951, y: 2.0028687, z: 0.0011138916}

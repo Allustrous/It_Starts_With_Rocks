@@ -15,7 +15,7 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject Stamina8;
     public GameObject Stamina9;
 
-    public float speed = 7f;
+    public float speed = 10f;
     float jumpHeight = 900;
     Rigidbody rb;
     public GameObject Player;
@@ -55,12 +55,12 @@ public class PlayerBehavior : MonoBehaviour
         
         if (Input.GetKeyUp("s"))
         {
-            speed = 7f;
+            speed = 10f;
         }
 
         if (Input.GetKeyDown("s"))
         {
-            speed = 4f;
+            speed = 7f;
         }
 
         if (stamina == 8)
@@ -159,14 +159,14 @@ public class PlayerBehavior : MonoBehaviour
                     {
                         if (Input.GetKeyDown("left shift"))
                         {
-                            speed = 10f;
+                            speed = 14f;
                             StopCoroutine("Recover");
                             StartCoroutine("Dash");
                             yield return new WaitForSeconds(0.001f);
                         }
                         if (Input.GetKeyUp("left shift"))
                         {
-                            speed = 7f;
+                            speed = 10f;
                             StopCoroutine("Dash");
                             StartCoroutine("Recover");
                             yield return new WaitForSeconds(0.001f);
@@ -174,7 +174,7 @@ public class PlayerBehavior : MonoBehaviour
                     }
                     else
                     {
-                        speed = 7f;
+                        speed = 10f;
                         StopCoroutine("Dash");
                         StartCoroutine("Recover");
                         yield return new WaitForSeconds(0.001f);
