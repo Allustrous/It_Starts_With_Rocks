@@ -17,7 +17,7 @@ public class StoneGather : MonoBehaviour
     {
         if (respawned == 0)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Stone")
             {
                 gatheringCounter++;
                 

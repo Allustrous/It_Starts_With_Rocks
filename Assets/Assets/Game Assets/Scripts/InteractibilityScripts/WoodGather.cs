@@ -16,7 +16,7 @@ public class WoodGather : MonoBehaviour
     {
         if (respawned == 0)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Wood")
             {
                 gatheringCounter++;
             }

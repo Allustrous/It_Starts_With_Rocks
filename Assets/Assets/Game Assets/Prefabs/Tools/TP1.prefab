@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4517586285156881487}
   m_Layer: 0
   m_Name: TP1
-  m_TagString: Player
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

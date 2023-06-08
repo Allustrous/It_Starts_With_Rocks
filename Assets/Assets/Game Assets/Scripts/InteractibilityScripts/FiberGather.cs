@@ -17,7 +17,7 @@ public class FiberGather : MonoBehaviour
     {
         if (respawned == 0)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Fiber")
             {
                 gatheringCounter++;
                 
