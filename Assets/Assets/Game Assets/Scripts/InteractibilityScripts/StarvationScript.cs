@@ -28,8 +28,10 @@ public class StarvationScript : MonoBehaviour
     public GameObject Health7;
     public GameObject Health8;
 
-    float timeValue = 20;
+    float timeValue = 180;
     int timeNow;
+    float timeHealth = 20;
+    int timeNowHealth;
 
 
     // Start is called before the first frame update
@@ -45,10 +47,13 @@ public class StarvationScript : MonoBehaviour
 
 
         timeNow = (int)timeValue;
+        timeNowHealth = (int)timeHealth;
 
         Debug.Log("Water: " + WaterLevel);
         Debug.Log("Food: " + FoodLevel);
         Debug.Log("Time: " + timeNow);
+        Debug.Log("Health Time: " + timeNowHealth);
+        Debug.Log("Health: " + HealthLevel);
 
         
 
@@ -56,59 +61,236 @@ public class StarvationScript : MonoBehaviour
 
         if (AtCamp == 0)
         {
-            timeValue = 20;
+
         }
         else if (AtCamp == 1)
         {
+            if (timeNowHealth > 0)
+            {
+                if (timeNowHealth == 1)
+                {
+                    Health1.SetActive(false);
+                    Health2.SetActive(false);
+                    Health3.SetActive(false);
+                    Health4.SetActive(false);
+                    Health5.SetActive(false);
+                    Health6.SetActive(false);
+                    Health7.SetActive(false);
+                    Health8.SetActive(false);
+                    HealthLevel = 0;
+                }
+                else if (timeNowHealth == 2)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(false);
+                    Health3.SetActive(false);
+                    Health4.SetActive(false);
+                    Health5.SetActive(false);
+                    Health6.SetActive(false);
+                    Health7.SetActive(false);
+                    Health8.SetActive(false);
+                    HealthLevel = 1;
+                }
+                else if (timeNowHealth == 5)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(true);
+                    Health3.SetActive(false);
+                    Health4.SetActive(false);
+                    Health5.SetActive(false);
+                    Health6.SetActive(false);
+                    Health7.SetActive(false);
+                    Health8.SetActive(false);
+                    HealthLevel = 2;
+                }
+                else if (timeNowHealth == 7)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(true);
+                    Health3.SetActive(true);
+                    Health4.SetActive(false);
+                    Health5.SetActive(false);
+                    Health6.SetActive(false);
+                    Health7.SetActive(false);
+                    Health8.SetActive(false);
+                    HealthLevel = 3;
+                }
+                else if (timeNowHealth == 10)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(true);
+                    Health3.SetActive(true);
+                    Health4.SetActive(true);
+                    Health5.SetActive(false);
+                    Health6.SetActive(false);
+                    Health7.SetActive(false);
+                    Health8.SetActive(false);
+                    HealthLevel = 4;
+                }
+                else if (timeNowHealth == 12)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(true);
+                    Health3.SetActive(true);
+                    Health4.SetActive(true);
+                    Health5.SetActive(false);
+                    Health6.SetActive(false);
+                    Health7.SetActive(false);
+                    Health8.SetActive(false);
+                    HealthLevel = 5;
+                }
+                else if (timeNowHealth == 15)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(true);
+                    Health3.SetActive(true);
+                    Health4.SetActive(true);
+                    Health5.SetActive(true);
+                    Health6.SetActive(true);
+                    Health7.SetActive(false);
+                    Health8.SetActive(false);
+                    HealthLevel = 6;
+                }
+                else if (timeNowHealth == 17)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(true);
+                    Health3.SetActive(true);
+                    Health4.SetActive(true);
+                    Health5.SetActive(true);
+                    Health6.SetActive(true);
+                    Health7.SetActive(true);
+                    Health8.SetActive(false);
+                    HealthLevel = 7;
+                }
+                else if (timeNowHealth == 20)
+                {
+                    Health1.SetActive(true);
+                    Health2.SetActive(true);
+                    Health3.SetActive(true);
+                    Health4.SetActive(true);
+                    Health5.SetActive(true);
+                    Health6.SetActive(true);
+                    Health7.SetActive(true);
+                    Health8.SetActive(true);
+                    HealthLevel = 8;
+                }
+            }
+
+
             if (timeValue > 0)
             {
                 timeValue -= Time.deltaTime;
             }
-            
             if (WaterLevel > 0)
             {
-                if (timeNow == 7)
+                if (timeNow == 144)
                 {
                     WaterLevel = 4;
+                    Thirst0.SetActive(false);
+                    Thirst1.SetActive(false);
+                    Thirst2.SetActive(false);
+                    Thirst3.SetActive(false);
+                    Thirst4.SetActive(true);
+                    Thirst5.SetActive(false);
                 }
-                else if (timeNow == 4)
+                else if (timeNow == 108)
                 {
                     WaterLevel = 3;
+                    Thirst0.SetActive(false);
+                    Thirst1.SetActive(false);
+                    Thirst2.SetActive(false);
+                    Thirst3.SetActive(true);
+                    Thirst4.SetActive(false);
+                    Thirst5.SetActive(false);
                 }
-                else if (timeNow == 3)
+                else if (timeNow == 72)
                 {
                     WaterLevel = 2;
+                    Thirst0.SetActive(false);
+                    Thirst1.SetActive(false);
+                    Thirst2.SetActive(true);
+                    Thirst3.SetActive(false);
+                    Thirst4.SetActive(false);
+                    Thirst5.SetActive(false);
                 }
-                else if (timeNow == 2)
+                else if (timeNow == 36)
                 {
                     WaterLevel = 1;
+                    Thirst0.SetActive(false);
+                    Thirst1.SetActive(true);
+                    Thirst2.SetActive(false);
+                    Thirst3.SetActive(false);
+                    Thirst4.SetActive(false);
+                    Thirst5.SetActive(false);
                 }
                 else if (timeNow == 1)
                 {
                     WaterLevel = 0;
+                    Thirst0.SetActive(true);
+                    Thirst1.SetActive(false);
+                    Thirst2.SetActive(false);
+                    Thirst3.SetActive(false);
+                    Thirst4.SetActive(false);
+                    Thirst5.SetActive(false);
                 }
-                else
+                else if (timeNow == 180)
                 {
                     WaterLevel = 5;
+                    Thirst0.SetActive(false);
+                    Thirst1.SetActive(false);
+                    Thirst2.SetActive(false);
+                    Thirst3.SetActive(false);
+                    Thirst4.SetActive(false);
+                    Thirst5.SetActive(true);
                 }
+            }
+            if (WaterLevel == 0)
+            {
+                if(timeHealth > 0)
+                {
+                    timeHealth -= Time.deltaTime;
+                }
+                
             }
             if (FoodLevel > 0)
             {
-                if (timeNow == 7)
+                if (timeNow == 120)
                 {
                     FoodLevel = 2;
+                    Hunger1.SetActive(true);
+                    Hunger2.SetActive(true);
+                    Hunger3.SetActive(false);
+
                 }
-                if (timeNow == 4)
+                else if (timeNow == 60)
                 {
                     FoodLevel = 1;
+                    Hunger1.SetActive(true);
+                    Hunger2.SetActive(false);
+                    Hunger3.SetActive(false);
                 }
-                if (timeNow == 1)
+                else if (timeNow == 1)
                 {
                     FoodLevel = 0;
+                    Hunger1.SetActive(false);
+                    Hunger2.SetActive(false);
+                    Hunger3.SetActive(false);
+                    timeHealth -= Time.deltaTime;
                 }
-                else
+                else if (timeNow == 180)
                 {
                     FoodLevel = 3;
+                    Hunger1.SetActive(true);
+                    Hunger2.SetActive(true);
+                    Hunger3.SetActive(true);
+                }
+            }
+            if (FoodLevel == 0)
+            {
+                if(timeHealth > 0)
+                {
+                    timeHealth -= Time.deltaTime;
                 }
             }
         }
@@ -131,319 +313,4 @@ public class StarvationScript : MonoBehaviour
         }
     }
 
-    IEnumerator StarveCheck()
-    {
-        // Food
-        if (FoodLevel == 3)
-        {
-            Hunger1.SetActive(true);
-            Hunger2.SetActive(true);
-            Hunger3.SetActive(true);
-            StopCoroutine("Starving");
-            Debug.Log(FoodLevel);
-        }
-        else if (FoodLevel == 2)
-        {
-            Hunger1.SetActive(true);
-            Hunger2.SetActive(true);
-            Hunger3.SetActive(false);
-            StopCoroutine("Starving");
-            Debug.Log(FoodLevel);
-        }
-        else if (FoodLevel == 1)
-        {
-            Hunger1.SetActive(true);
-            Hunger2.SetActive(false);
-            Hunger3.SetActive(false);
-            StopCoroutine("Starving");
-            Debug.Log(FoodLevel);
-        }
-        else if (FoodLevel == 0)
-        {
-            Hunger1.SetActive(false);
-            Hunger2.SetActive(false);
-            Hunger3.SetActive(false);
-            StartCoroutine("Starving");
-            Debug.Log(FoodLevel);
-        }
-
-        // Water
-        if (WaterLevel == 5)
-        {
-            Thirst0.SetActive(false);
-            Thirst1.SetActive(false);
-            Thirst2.SetActive(false);
-            Thirst3.SetActive(false);
-            Thirst4.SetActive(false);
-            Thirst5.SetActive(true);
-            StopCoroutine("Dehydrating");
-            Debug.Log(WaterLevel);
-        }
-        else if (WaterLevel == 4)
-        {
-            Thirst0.SetActive(false);
-            Thirst1.SetActive(false);
-            Thirst2.SetActive(false);
-            Thirst3.SetActive(false);
-            Thirst4.SetActive(true);
-            Thirst5.SetActive(false);
-            StopCoroutine("Dehydrating");
-            Debug.Log(WaterLevel);
-        }
-        else if (WaterLevel == 3)
-        {
-            Thirst0.SetActive(false);
-            Thirst1.SetActive(false);
-            Thirst2.SetActive(false);
-            Thirst3.SetActive(true);
-            Thirst4.SetActive(false);
-            Thirst5.SetActive(false);
-            StopCoroutine("Dehydrating");
-            Debug.Log(WaterLevel);
-        }
-        else if (WaterLevel == 2)
-        {
-            Thirst0.SetActive(false);
-            Thirst1.SetActive(false);
-            Thirst2.SetActive(true);
-            Thirst3.SetActive(false);
-            Thirst4.SetActive(false);
-            Thirst5.SetActive(false);
-            StopCoroutine("Dehydrating");
-            Debug.Log(WaterLevel);
-        }
-        else if (WaterLevel == 1)
-        {
-            Thirst0.SetActive(false);
-            Thirst1.SetActive(true);
-            Thirst2.SetActive(false);
-            Thirst3.SetActive(false);
-            Thirst4.SetActive(false);
-            Thirst5.SetActive(false);
-            StopCoroutine("Dehydrating");
-            Debug.Log(WaterLevel);
-        }
-        else if (WaterLevel == 0)
-        {
-            Thirst0.SetActive(true);
-            Thirst1.SetActive(false);
-            Thirst2.SetActive(false);
-            Thirst3.SetActive(false);
-            Thirst4.SetActive(false);
-            Thirst5.SetActive(false);
-            StartCoroutine("Dehydrating");
-            Debug.Log(WaterLevel);
-        }
-
-        // return
-        yield return new WaitForSeconds(1);
-    }
-
-    IEnumerator Starving()
-    {
-        if (HealthLevel == 0)
-        {
-            Health1.SetActive(false);
-            Health2.SetActive(false);
-            Health3.SetActive(false);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 1)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(false);
-            Health3.SetActive(false);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 2)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(false);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 3)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 4)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 5)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 6)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(true);
-            Health6.SetActive(true);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 7)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(true);
-            Health6.SetActive(true);
-            Health7.SetActive(true);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 8)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(true);
-            Health6.SetActive(true);
-            Health7.SetActive(true);
-            Health8.SetActive(true);
-        }
-        yield return new WaitForSeconds(1);
-    }
-
-    IEnumerator Dehydrating()
-    {
-        if (HealthLevel == 0)
-        {
-            Health1.SetActive(false);
-            Health2.SetActive(false);
-            Health3.SetActive(false);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 1)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(false);
-            Health3.SetActive(false);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 2)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(false);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 3)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(false);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 4)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 5)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(false);
-            Health6.SetActive(false);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 6)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(true);
-            Health6.SetActive(true);
-            Health7.SetActive(false);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 7)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(true);
-            Health6.SetActive(true);
-            Health7.SetActive(true);
-            Health8.SetActive(false);
-        }
-        else if (HealthLevel == 8)
-        {
-            Health1.SetActive(true);
-            Health2.SetActive(true);
-            Health3.SetActive(true);
-            Health4.SetActive(true);
-            Health5.SetActive(true);
-            Health6.SetActive(true);
-            Health7.SetActive(true);
-            Health8.SetActive(true);
-        }
-        yield return new WaitForSeconds(1);
-    }
 }
