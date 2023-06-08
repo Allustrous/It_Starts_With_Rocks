@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StarvationScript : MonoBehaviour
 {
-
+    public ResourceCounter resourcecounter;
+    public CampsiteDeposit campsitedeposit;
     float FoodLevel = 3;
     float WaterLevel = 5;
     float HealthLevel = 8;
@@ -61,7 +62,86 @@ public class StarvationScript : MonoBehaviour
 
         if (AtCamp == 0)
         {
+            // water
+            if(campsitedeposit.campWater > 0)
+            {
+                if (WaterLevel == 0)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    WaterLevel = 5;
+                    campsitedeposit.campWater -= 10;
+                }
+                else if (WaterLevel == 1)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    WaterLevel = 5;
+                    campsitedeposit.campWater -= 8;
+                }
+                else if (WaterLevel == 2)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    WaterLevel = 5;
+                    campsitedeposit.campWater -= 6;
+                }
+                else if (WaterLevel == 3)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    WaterLevel = 5;
+                    campsitedeposit.campWater -= 4;
+                }
+                else if (WaterLevel == 4)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    WaterLevel = 5;
+                    campsitedeposit.campWater -= 2;
+                }
+                else if (WaterLevel == 5)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    WaterLevel = 5;
+                }
+            }
+            
 
+            // food
+
+            if(campsitedeposit.campFood > 0)
+            {
+                if (FoodLevel == 0)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    FoodLevel = 5;
+                    campsitedeposit.campFood -= 10;
+                }
+                else if (FoodLevel == 1)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    FoodLevel = 5;
+                    campsitedeposit.campFood -= 7;
+                }
+                else if (FoodLevel == 2)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    FoodLevel = 5;
+                    campsitedeposit.campFood -= 3;
+                }
+                else if (FoodLevel == 3)
+                {
+                    timeValue = 180;
+                    timeHealth = 20;
+                    FoodLevel = 5;
+                }
+            }
+            
         }
         else if (AtCamp == 1)
         {

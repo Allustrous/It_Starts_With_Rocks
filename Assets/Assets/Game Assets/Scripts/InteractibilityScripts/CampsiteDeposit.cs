@@ -15,9 +15,9 @@ public class CampsiteDeposit : MonoBehaviour
     public TextMeshProUGUI campLeatherTXT;
     public int campLeather = 0;
     public TextMeshProUGUI campFoodTXT;
-    public int campFood = 0;
+    public int campFood = 50;
     public TextMeshProUGUI campWaterTXT;
-    public int campWater = 0;
+    public int campWater = 50;
 
     private void OnCollisionEnter(Collision collision)
     {
