@@ -5,6 +5,7 @@ using TMPro;
 
 public class CampsiteDeposit : MonoBehaviour
 {
+    public WaterGather watergather;
     public ResourceCounter resourcecounter;
     public TextMeshProUGUI campStoneTXT;
     public int campStone = 0;
@@ -35,6 +36,7 @@ public class CampsiteDeposit : MonoBehaviour
             resourcecounter.gatheredFood = 0;
             campWater += resourcecounter.gatheredWater;
             resourcecounter.gatheredWater = 0;
+            watergather.WaterLevel = 0;
             Debug.Log("Resources Deposited!");
         }
     }

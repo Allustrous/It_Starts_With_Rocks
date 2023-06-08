@@ -85,6 +85,7 @@ public class LeatherGather : MonoBehaviour
     {
         Part1.SetActive(false);
         resourcecounter.gatheredLeather += gatheredResource;
+        resourcecounter.gatheredFood += gatheredResource;
         respawn = 1;
         respawned = 1;
         gatheringCounter = 0;

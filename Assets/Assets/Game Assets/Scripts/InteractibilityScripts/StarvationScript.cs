@@ -60,12 +60,6 @@ public class StarvationScript : MonoBehaviour
 
         if (AtCamp == 0)
         {
-
-            
-            
-
-
-
             // water
             if(campsitedeposit.campWater > 0 & campsitedeposit.campFood > 0)
             {
