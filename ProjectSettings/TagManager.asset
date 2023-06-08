@@ -12,6 +12,7 @@ TagManager:
   - Treetop
   - Asset
   - Camera
+  - Leather
   layers:
   - Default
   - TransparentFX

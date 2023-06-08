@@ -63,6 +63,10 @@ public class WoodGather : MonoBehaviour
 
     void Update()
     {
+        if (gatheringCounter > 5)
+        {
+            gatheringCounter = 0;
+        }
         if (equipment.axeTier == 1)
         {
             Debug.Log("Axe Tier 1");
@@ -76,7 +80,7 @@ public class WoodGather : MonoBehaviour
         if (equipment.axeTier == 3)
         {
             Debug.Log("Axe Tier 3");
-            gatheredResource = 20;
+            gatheredResource = 10;
         }
 
 
