@@ -6,10 +6,12 @@ using TMPro;
 public class StoneGather : MonoBehaviour
 {
     public ResourceCounter resourcecounter;
+    public Equipment equipment;
     public GameObject Part1;
     public float gatheringCounter = 0;
     float respawn = 0;
     float respawned = 0;
+    int gatheredResource = 5;
 
 
     // Start is called before the first frame update
@@ -32,6 +34,19 @@ public class StoneGather : MonoBehaviour
 
     void Update()
     {
+        if (equipment.pickTier == 1)
+        {
+            gatheredResource = 5;
+        }
+        else if (equipment.pickTier == 2)
+        {
+            gatheredResource = 10;
+        }
+        else if (equipment.pickTier == 3)
+        {
+            gatheredResource = 20;
+        }
+
 
         if(respawn == 1)
             {
@@ -68,7 +83,7 @@ public class StoneGather : MonoBehaviour
     {
         
         Part1.SetActive(false);
-        resourcecounter.gatheredStone += 5;
+        resourcecounter.gatheredStone += gatheredResource;
         respawn = 1;
         respawned = 1;
         gatheringCounter = 0;

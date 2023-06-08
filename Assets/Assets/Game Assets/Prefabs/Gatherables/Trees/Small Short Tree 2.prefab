@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c858b6aa5f6b9cf4384400d30ec02a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcecounter: {fileID: 0}
+  resourcecounter: {fileID: 4775627869718311452, guid: b51629e673c8b944a9f2a094aac82387, type: 3}
+  equipment: {fileID: 4775627869957901056, guid: b51629e673c8b944a9f2a094aac82387, type: 3}
   Part1: {fileID: 7219441437321243925}
   Part2: {fileID: 7219441437321243926}
   Part3: {fileID: 0}

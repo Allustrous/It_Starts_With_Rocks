@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Equipment : MonoBehaviour
 {
-    float axeTier = 1;
-    float pickTier = 1;
-    float sickleTier = 1;
-    float spearTier = 1;
-    float clubTier = 1;
+    public float axeTier = 1;
+    public float pickTier = 1;
+    public float sickleTier = 1;
+    public float spearTier = 1;
+    public float clubTier = 1;
 
     public GameObject axeSprite1;
     public GameObject axeSprite2;

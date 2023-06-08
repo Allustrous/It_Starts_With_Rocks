@@ -31,8 +31,8 @@ public class ResourceCounter : MonoBehaviour
         InventoryWood.SetText("Wood: " + gatheredWood.ToString());
         InventoryFiber.SetText("Fiber: " + gatheredFiber.ToString());
         InventoryLeather.SetText("Leather: " + gatheredLeather.ToString());
-        InventoryFood.SetText(gatheredFood.ToString() + " :Food");
-        InventoryWater.SetText(gatheredWater.ToString() + " :Water");
+        InventoryFood.SetText("Food: " + gatheredFood.ToString());
+        InventoryWater.SetText("Water: " + gatheredWater.ToString());
 
     }
 }

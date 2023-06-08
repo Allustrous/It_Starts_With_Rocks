@@ -140,7 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7547eafb7c9ec46ba596437de9da29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcecounter: {fileID: 0}
+  resourcecounter: {fileID: 4775627869718311452, guid: b51629e673c8b944a9f2a094aac82387, type: 3}
+  equipment: {fileID: 4775627869957901056, guid: b51629e673c8b944a9f2a094aac82387, type: 3}
   Part1: {fileID: 8200795583142931235}
   gatheringCounter: 0
 --- !u!54 &8200795583060346210

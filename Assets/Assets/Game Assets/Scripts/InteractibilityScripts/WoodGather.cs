@@ -5,11 +5,13 @@ using UnityEngine;
 public class WoodGather : MonoBehaviour
 {
     public ResourceCounter resourcecounter;
+    public Equipment equipment;
     public GameObject Part1;
     public GameObject Part2;
     public GameObject Part3;
     public float gatheringCounter = 0;
     float respawned = 0;
+    int gatheredResource = 5;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -61,6 +63,23 @@ public class WoodGather : MonoBehaviour
 
     void Update()
     {
+        if (equipment.axeTier == 1)
+        {
+            Debug.Log("Axe Tier 1");
+            gatheredResource = 5;
+        }
+        if (equipment.axeTier == 2)
+        {
+            Debug.Log("Axe Tier 2");
+            gatheredResource = 10;
+        }
+        if (equipment.axeTier == 3)
+        {
+            Debug.Log("Axe Tier 3");
+            gatheredResource = 20;
+        }
+
+
         if (gatheringCounter == 0)
             {
                 respawned = 0;
@@ -81,7 +100,7 @@ public class WoodGather : MonoBehaviour
     }
     IEnumerator Resourcer ()
     {
-        resourcecounter.gatheredWood += 5;
+        resourcecounter.gatheredWood += gatheredResource;
         Part1.SetActive(false);
         Part2.SetActive(false);
         Part3.SetActive(false);
