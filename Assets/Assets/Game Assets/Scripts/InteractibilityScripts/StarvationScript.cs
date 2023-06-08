@@ -58,12 +58,16 @@ public class StarvationScript : MonoBehaviour
 
         
 
-        
-
         if (AtCamp == 0)
         {
+
+            
+            
+
+
+
             // water
-            if(campsitedeposit.campWater > 0)
+            if(campsitedeposit.campWater > 0 & campsitedeposit.campFood > 0)
             {
                 if (WaterLevel == 0)
                 {
@@ -106,41 +110,66 @@ public class StarvationScript : MonoBehaviour
                     timeHealth = 20;
                     WaterLevel = 5;
                 }
+                
             }
+            else
+                {
+                    if (timeValue > 0)
+                    {
+                        if (campsitedeposit.campFood <= 0 || campsitedeposit.campWater <= 0)
+                        {
+                            timeValue -= Time.deltaTime;
+                        }
+                    }
+                }
+
+            
             
 
             // food
 
-            if(campsitedeposit.campFood > 0)
+            if(campsitedeposit.campFood > 0 & campsitedeposit.campWater > 0)
             {
                 if (FoodLevel == 0)
                 {
                     timeValue = 180;
                     timeHealth = 20;
-                    FoodLevel = 5;
+                    FoodLevel = 3;
                     campsitedeposit.campFood -= 10;
                 }
                 else if (FoodLevel == 1)
                 {
                     timeValue = 180;
                     timeHealth = 20;
-                    FoodLevel = 5;
+                    FoodLevel = 3;
                     campsitedeposit.campFood -= 7;
                 }
                 else if (FoodLevel == 2)
                 {
                     timeValue = 180;
                     timeHealth = 20;
-                    FoodLevel = 5;
+                    FoodLevel = 3;
                     campsitedeposit.campFood -= 3;
                 }
                 else if (FoodLevel == 3)
                 {
                     timeValue = 180;
                     timeHealth = 20;
-                    FoodLevel = 5;
+                    FoodLevel = 3;
                 }
+                
             }
+            else
+                {
+                    if (timeValue > 0)
+                    {
+                        if (campsitedeposit.campFood <= 0 || campsitedeposit.campWater <= 0)
+                        {
+                            timeValue -= Time.deltaTime;
+                        }
+                    }
+                }
+            
             
         }
         else if (AtCamp == 1)
