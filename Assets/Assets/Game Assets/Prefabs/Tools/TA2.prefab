@@ -105,9 +105,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7603106266322789412}
+  - component: {fileID: 2771415696442761398}
+  - component: {fileID: 1153713851061531951}
   m_Layer: 0
   m_Name: TA2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +129,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2771415696442761398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232884404412746560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.2901917}
+  m_Center: {x: 0, y: 0, z: 1.1450958}
+--- !u!54 &1153713851061531951
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232884404412746560}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &9120835320510041599
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +169,6 @@ GameObject:
   - component: {fileID: 2407106760357385364}
   - component: {fileID: 4089461996630489942}
   - component: {fileID: 4679472558538248257}
-  - component: {fileID: 9124742196691453991}
   m_Layer: 0
   m_Name: TestAxe2
   m_TagString: Untagged
@@ -210,20 +240,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &9124742196691453991
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8320604262579116755, guid: b46702e6361b6774eb4dbaa04723e9d1, type: 3}
-  m_PrefabInstance: {fileID: 787310919682162068}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9120835320510041599}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &787310919682162068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283,5 +299,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b46702e6361b6774eb4dbaa04723e9d1, type: 3}

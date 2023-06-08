@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4139908754605745024}
   - component: {fileID: 4802138048484956884}
   - component: {fileID: 1785746811016433145}
-  - component: {fileID: 1139942558425058147}
   m_Layer: 0
   m_Name: TestPickAxe1
   m_TagString: Untagged
@@ -83,20 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1139942558425058147
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6398007047608531108, guid: 81eb7dd3cf5d22448807d66435932fb0, type: 3}
-  m_PrefabInstance: {fileID: 3260549646765305576}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2759752818876952780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2791360150892657896
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,9 +91,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5308259346823238131}
+  - component: {fileID: 8148266103732901962}
+  - component: {fileID: 4517586285156881487}
   m_Layer: 0
   m_Name: TP1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +115,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8148266103732901962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2791360150892657896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.2901917}
+  m_Center: {x: 0, y: 0, z: 1.1450958}
+--- !u!54 &4517586285156881487
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2791360150892657896}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4768623092448531670
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,5 +299,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 81eb7dd3cf5d22448807d66435932fb0, type: 3}

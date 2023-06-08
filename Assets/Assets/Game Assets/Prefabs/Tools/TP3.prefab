@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5318266998124561603}
+  - component: {fileID: 4812175054395693443}
+  - component: {fileID: -924719733674161880}
   m_Layer: 0
   m_Name: TP3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +33,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4812175054395693443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523446074588737482}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.2901917}
+  m_Center: {x: 0, y: 0, z: 1.1450958}
+--- !u!54 &-924719733674161880
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523446074588737482}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &5972853431994702264
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +169,6 @@ GameObject:
   - component: {fileID: 4676390337021998911}
   - component: {fileID: 7184521833936668961}
   - component: {fileID: 2260440908411327964}
-  - component: {fileID: 7100291195679513608}
   m_Layer: 0
   m_Name: TestPickAxe3
   m_TagString: Untagged
@@ -210,20 +240,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7100291195679513608
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2494241347404888537, guid: b93bb67284ed3f54697b0bd82f1c9f12, type: 3}
-  m_PrefabInstance: {fileID: 7207564291110746977}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8937207454000548838}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7207564291110746977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283,5 +299,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPickAxe3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b93bb67284ed3f54697b0bd82f1c9f12, type: 3}

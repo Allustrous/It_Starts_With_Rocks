@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 715228730763384226}
   - component: {fileID: 8802053808991445921}
   - component: {fileID: 3694703961600412002}
-  - component: {fileID: 4496227159594774657}
   m_Layer: 0
   m_Name: TestSickle2
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4496227159594774657
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4650183464853043806, guid: 6fdb245b7cb8e084cad897b8a13a1ea9, type: 3}
-  m_PrefabInstance: {fileID: 3977886086299602630}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124027818501671401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1663509270623552391
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +188,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2249759657504870434}
+  - component: {fileID: 1198790786520925243}
+  - component: {fileID: -8909291085781409967}
   m_Layer: 0
   m_Name: TS2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,6 +212,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1198790786520925243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585846355041940919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.2901917}
+  m_Center: {x: 0, y: 0, z: 1.1450958}
+--- !u!54 &-8909291085781409967
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585846355041940919}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8115820479640949259
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,5 +396,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestSickle2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 6fdb245b7cb8e084cad897b8a13a1ea9, type: 3}

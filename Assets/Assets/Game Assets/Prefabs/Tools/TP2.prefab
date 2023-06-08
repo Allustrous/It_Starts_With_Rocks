@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1352439409248365526}
   - component: {fileID: 1641208179006791731}
   - component: {fileID: 322312248583552074}
-  - component: {fileID: 7494232231046025801}
   m_Layer: 0
   m_Name: TestPickAxe2
   m_TagString: Untagged
@@ -83,20 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7494232231046025801
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7201576932176377943, guid: 982bee9507be00545bd7e0fd33d0fb3a, type: 3}
-  m_PrefabInstance: {fileID: 6832240801870047563}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3954473463283732169}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5140741523122014113
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,9 +187,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2724233610478020427}
+  - component: {fileID: 8785468160104704707}
+  - component: {fileID: -3147696521402200720}
   m_Layer: 0
   m_Name: TP2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,6 +211,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8785468160104704707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387935219087430615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.2901917}
+  m_Center: {x: 0, y: 0, z: 1.1450958}
+--- !u!54 &-3147696521402200720
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387935219087430615}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &6832240801870047563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283,5 +299,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPickAxe2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 982bee9507be00545bd7e0fd33d0fb3a, type: 3}

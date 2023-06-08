@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Equipment : MonoBehaviour
 {
-    float axeTier = 2;
+    float axeTier = 1;
     float pickTier = 1;
     float sickleTier = 1;
     float spearTier = 1;
@@ -107,6 +107,36 @@ public class Equipment : MonoBehaviour
                     spawnedAxe1.transform.parent = transform;
                     spawnedAxe1.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     axe1spawned = 1;
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
+
+
                 }
             }
             else if (axe1spawned == 1)
@@ -132,6 +162,35 @@ public class Equipment : MonoBehaviour
                     spawnedAxe2.transform.parent = transform;
                     spawnedAxe2.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     axe2spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (axe2spawned == 1)
@@ -157,6 +216,35 @@ public class Equipment : MonoBehaviour
                     spawnedAxe3.transform.parent = transform;
                     spawnedAxe3.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     axe3spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (axe3spawned == 1)
@@ -184,6 +272,35 @@ public class Equipment : MonoBehaviour
                     spawnedPick1.transform.parent = transform;
                     spawnedPick1.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     pick1spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (pick1spawned == 1)
@@ -209,6 +326,35 @@ public class Equipment : MonoBehaviour
                     spawnedPick2.transform.parent = transform;
                     spawnedPick2.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     pick2spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (pick2spawned == 1)
@@ -234,6 +380,35 @@ public class Equipment : MonoBehaviour
                     spawnedPick3.transform.parent = transform;
                     spawnedPick3.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     pick3spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (pick3spawned == 1)
@@ -261,6 +436,36 @@ public class Equipment : MonoBehaviour
                     spawnedSickle1.transform.parent = transform;
                     spawnedSickle1.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     sickle1spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
+
                 }
             }
             else if (sickle1spawned == 1)
@@ -286,6 +491,35 @@ public class Equipment : MonoBehaviour
                     spawnedSickle2.transform.parent = transform;
                     spawnedSickle2.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     sickle2spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (sickle2spawned == 1)
@@ -311,6 +545,35 @@ public class Equipment : MonoBehaviour
                     spawnedSickle3.transform.parent = transform;
                     spawnedSickle3.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     sickle3spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+                    
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (sickle3spawned == 1)
@@ -339,6 +602,35 @@ public class Equipment : MonoBehaviour
                     spawnedSpear1.transform.parent = transform;
                     spawnedSpear1.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     spear1spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (spear1spawned == 1)
@@ -364,6 +656,35 @@ public class Equipment : MonoBehaviour
                     spawnedSpear2.transform.parent = transform;
                     spawnedSpear2.transform.localRotation = Quaternion.Euler(0,playerROT,0);
                     spear2spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
                 }
             }
             else if (spear2spawned == 1)
@@ -381,9 +702,53 @@ public class Equipment : MonoBehaviour
             spearSprite1.SetActive(false);
             spearSprite2.SetActive(false);
             spearSprite3.SetActive(true);
-            if(Input.GetKeyDown("4"))
+            if(spear3spawned == 0)
             {
-                
+                if(Input.GetKeyDown("4"))
+                {
+                    spawnedSpear3 = Instantiate(spear3, playerPOS, Quaternion.identity);
+                    spawnedSpear3.transform.parent = transform;
+                    spawnedSpear3.transform.localRotation = Quaternion.Euler(0,playerROT,0);
+                    spear3spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
+
+                }
+            }
+            else if (spear3spawned == 1)
+            {
+                if(Input.GetKeyDown("4"))
+                {
+                    spear3spawned = 0;
+                    Destroy(spawnedSpear3);
+                }
             }
 
         }
@@ -392,11 +757,54 @@ public class Equipment : MonoBehaviour
         if (clubTier == 1)
         {
             clubSprite1.SetActive(true);
-            pickSprite2.SetActive(false);
-            pickSprite3.SetActive(false);
-            if(Input.GetKeyDown("5"))
+            clubSprite2.SetActive(false);
+            clubSprite3.SetActive(false);
+            if(club1spawned == 0)
             {
-                
+                if(Input.GetKeyDown("5"))
+                {
+                    spawnedClub1 = Instantiate(club1, playerPOS, Quaternion.identity);
+                    spawnedClub1.transform.parent = transform;
+                    spawnedClub1.transform.localRotation = Quaternion.Euler(0,playerROT,0);
+                    club1spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub2);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club2spawned = 0;
+                    club3spawned = 0;
+                }
+            }
+            else if (club1spawned == 1)
+            {
+                if(Input.GetKeyDown("5"))
+                {
+                    club1spawned = 0;
+                    Destroy(spawnedClub1);
+                }
             }
 
         }
@@ -405,9 +813,52 @@ public class Equipment : MonoBehaviour
             clubSprite1.SetActive(false);
             clubSprite2.SetActive(true);
             clubSprite3.SetActive(false);
-            if(Input.GetKeyDown("5"))
+            if(club2spawned == 0)
             {
-                
+                if(Input.GetKeyDown("5"))
+                {
+                    spawnedClub2 = Instantiate(club2, playerPOS, Quaternion.identity);
+                    spawnedClub2.transform.parent = transform;
+                    spawnedClub2.transform.localRotation = Quaternion.Euler(0,playerROT,0);
+                    club2spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub3);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club3spawned = 0;
+                }
+            }
+            else if (club2spawned == 1)
+            {
+                if(Input.GetKeyDown("5"))
+                {
+                    club2spawned = 0;
+                    Destroy(spawnedClub2);
+                }
             }
 
         }
@@ -416,9 +867,53 @@ public class Equipment : MonoBehaviour
             clubSprite1.SetActive(false);
             clubSprite2.SetActive(false);
             clubSprite3.SetActive(true);
-            if(Input.GetKeyDown("5"))
+            if(club3spawned == 0)
             {
-                
+                if(Input.GetKeyDown("5"))
+                {
+                    spawnedClub3 = Instantiate(club3, playerPOS, Quaternion.identity);
+                    spawnedClub3.transform.parent = transform;
+                    spawnedClub3.transform.localRotation = Quaternion.Euler(0,playerROT,0);
+                    club3spawned = 1;
+                    Destroy(spawnedAxe1);
+                    Destroy(spawnedAxe2);
+                    Destroy(spawnedAxe3);
+                    Destroy(spawnedPick1);
+                    Destroy(spawnedPick2);
+                    Destroy(spawnedPick3);
+                    Destroy(spawnedSickle1);
+                    Destroy(spawnedSickle2);
+                    Destroy(spawnedSickle3);
+                    Destroy(spawnedSpear1);
+                    Destroy(spawnedSpear2);
+                    Destroy(spawnedSpear3);
+                    Destroy(spawnedClub1);
+                    Destroy(spawnedClub2);
+
+                    axe1spawned = 0;
+                    axe2spawned = 0;
+                    axe3spawned = 0;
+                    pick1spawned = 0;
+                    pick2spawned = 0;
+                    pick3spawned = 0;
+                    sickle1spawned = 0;
+                    sickle2spawned = 0;
+                    sickle3spawned = 0;
+                    spear1spawned = 0;
+                    spear2spawned = 0;
+                    spear3spawned = 0;
+                    club1spawned = 0;
+                    club2spawned = 0;
+
+                }
+            }
+            else if (club3spawned == 1)
+            {
+                if(Input.GetKeyDown("5"))
+                {
+                    club3spawned = 0;
+                    Destroy(spawnedClub3);
+                }
             }
 
         }
