@@ -14,6 +14,10 @@ public class CampsiteDeposit : MonoBehaviour
     public int campFiber = 0;
     public TextMeshProUGUI campLeatherTXT;
     public int campLeather = 0;
+    public TextMeshProUGUI campFoodTXT;
+    public int campFood = 0;
+    public TextMeshProUGUI campWaterTXT;
+    public int campWater = 0;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -27,6 +31,10 @@ public class CampsiteDeposit : MonoBehaviour
             resourcecounter.gatheredFiber = 0;
             campLeather += resourcecounter.gatheredLeather;
             resourcecounter.gatheredLeather = 0;
+            campFood += resourcecounter.gatheredFood;
+            resourcecounter.gatheredFood = 0;
+            campWater += resourcecounter.gatheredWater;
+            resourcecounter.gatheredWater = 0;
             Debug.Log("Resources Deposited!");
         }
     }
@@ -37,5 +45,7 @@ public class CampsiteDeposit : MonoBehaviour
         campWoodTXT.SetText("Wood: " + campWood.ToString());
         campFiberTXT.SetText("Fiber: " + campFiber.ToString());
         campLeatherTXT.SetText("Leather: " + campLeather.ToString());
+        campFoodTXT.SetText("Food: " + campFood.ToString());
+        campWaterTXT.SetText("Water: " + campWater.ToString());
     }
 }

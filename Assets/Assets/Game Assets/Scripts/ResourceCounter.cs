@@ -13,6 +13,11 @@ public class ResourceCounter : MonoBehaviour
     public int gatheredFiber = 0;
     public TextMeshProUGUI InventoryLeather;
     public int gatheredLeather = 0;
+    public TextMeshProUGUI InventoryFood;
+    public int gatheredFood = 0;
+    public TextMeshProUGUI InventoryWater;
+    public int gatheredWater = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +31,8 @@ public class ResourceCounter : MonoBehaviour
         InventoryWood.SetText("Wood: " + gatheredWood.ToString());
         InventoryFiber.SetText("Fiber: " + gatheredFiber.ToString());
         InventoryLeather.SetText("Leather: " + gatheredLeather.ToString());
+        InventoryFood.SetText(gatheredFood.ToString() + " :Food");
+        InventoryWater.SetText(gatheredWater.ToString() + " :Water");
+
     }
 }
